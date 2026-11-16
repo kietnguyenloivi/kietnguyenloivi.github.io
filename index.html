@@ -249,6 +249,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .docs button{border:0;padding:0;background:none;cursor:zoom-in;color:var(--muted);font:inherit;font-size:12px;text-align:left}
 .docs img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:0 0;border-radius:10px;border:1px solid var(--line);margin-bottom:6px;background:#fff}
 @media (max-width:640px){.case dl>div{grid-template-columns:1fr;gap:2px}}
+/* instagram proof (TDM) */
+.insta{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.insta h4{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.insta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.insta-grid button{border:0;padding:0;background:none;cursor:zoom-in;color:var(--muted);font:inherit;font-size:12.5px;text-align:left}
+.insta-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 0;border-radius:14px;border:1px solid var(--line);margin-bottom:6px;transition:transform .5s}
+.insta-grid button:hover img{transform:translateY(-3px)}
 /* sponsorship highlight */
 .sponsor{margin:26px 0;padding:24px;border-radius:22px;border:1px solid rgba(91,130,255,.35);
   background:radial-gradient(120% 90% at 100% 0,rgba(47,107,255,.32),transparent 60%),linear-gradient(170deg,#0c1a4d,#060d26);box-shadow:10px 10px 0 rgba(47,107,255,.22)}
@@ -660,6 +667,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div><b>10+</b><span>semi-professional clubs partnered with</span></div>
           </div>
           <div class="partner"><span>In partnership with</span><img src="assets/brands/promocen.png" alt="Binh Duong Promocen logo"><em>Binh Duong Trade Promotion Center</em></div>
+          <div class="insta">
+            <h4>The club's Instagram, @tdmbasketball_</h4>
+            <div class="insta-grid">
+              <button data-lb="7"><img src="assets/tdm/insta-posts.jpg" alt="Thu Dau Mot Basketball Instagram posts with view counts" loading="lazy"><span>Club posts, up to 3,600+ views each</span></button>
+              <button data-lb="8"><img src="assets/tdm/insta-tagged.jpg" alt="Posts by tournament media partners tagging Thu Dau Mot Basketball" loading="lazy"><span>Tagged by tournament media partners</span></button>
+            </div>
+          </div>
         </div>
       </article>
       <article class="proj reveal d1">
@@ -747,7 +761,8 @@ photos.unshift(['on25/6.jpg','ON25 · A livestream session on air'],['on25/1.jpg
 const stripN=photos.length;
 photos.push(['gv30-plan/schedule.jpg','Global Village 30 · Run-of-show by act'],['gv30-plan/crews.jpg','Global Village 30 · Crew staffing plan'],['gv30-plan/floorplan.jpg','Global Village 30 · Venue floor plan'],
  ['sponsors/redbull-fridge.jpg','Global Village 30 · Sponsored Red Bull, stocked for the evening'],['sponsors/jager-bottle.jpg','Global Village 30 · Sponsored Jägermeister'],
- ['sponsors/redbull-can.jpg','Global Village 30 · Red Bull Zero from our sponsor'],['sponsors/jager-team.jpg','Global Village 30 · With the team and our Jägermeister sponsorship']);
+ ['sponsors/redbull-can.jpg','Global Village 30 · Red Bull Zero from our sponsor'],['sponsors/jager-team.jpg','Global Village 30 · With the team and our Jägermeister sponsorship'],
+ ['tdm/insta-posts.jpg','Thu Dau Mot Basketball · Club posts on Instagram, with view counts'],['tdm/insta-tagged.jpg','Thu Dau Mot Basketball · Posts by tournament media partners']);
 $('#strip').innerHTML=photos.slice(0,stripN).map(([f,c],i)=>`<button data-i="${i}" aria-label="Open photo: ${c}"><img src="assets/${f}" alt="${c}" loading="lazy"><span>${c}</span></button>`).join('');
 
 // nav state
